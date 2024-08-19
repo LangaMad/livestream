@@ -36,6 +36,7 @@ class Games(models.Model):
         verbose_name = 'Игра'
         verbose_name_plural = 'Игры'
 
-
-
-
+# games = [# Dota = Games(name='Dota 2', description='Описание игры Dota 2')
+# # GTA5 = Games(name='GTA 5', description='Описание игры GTA 5')
+# # Skyrim = Games(name='Skyrim', description='Описание игры Skyrim')
+# ]

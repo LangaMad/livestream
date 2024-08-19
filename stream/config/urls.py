@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('apps.main.urls')),
     path('accounts/', include('apps.accounts.urls')),
+    path('games/', include('apps.games.urls')),
 ]
 from django.conf import settings
 from django.conf.urls.static import static
