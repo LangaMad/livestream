@@ -21,12 +21,9 @@ class GamesListView(ListView):
 
 
 
-class GamesDetail(DetailView):
+class GameDetail(DetailView):
     model = Games
     template_name = 'pages/games_detail.html'
     context_object_name = 'game'
+    queryset = Games.objects.all()
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['top_downloaded_games'] = Games.objects.order_by('-download_count')[:5]  # Получить 5 самых скачиваемых игр
-        return context

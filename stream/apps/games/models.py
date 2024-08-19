@@ -28,6 +28,9 @@ class Games(models.Model):
     rating = models.FloatField('Рейтинг игры', default=0.0)
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
     related_name='games')
+    game_url = models.URLField('Ссылка на игру',blank=True,null=True)
+    game_trailer = models.FileField('Трейлер игры', upload_to='games_trailer/',
+    blank=True, null=True)
 
     def __str__(self):
         return self.name
@@ -36,7 +39,6 @@ class Games(models.Model):
         verbose_name = 'Игра'
         verbose_name_plural = 'Игры'
 
-# games = [# Dota = Games(name='Dota 2', description='Описание игры Dota 2')
-# # GTA5 = Games(name='GTA 5', description='Описание игры GTA 5')
-# # Skyrim = Games(name='Skyrim', description='Описание игры Skyrim')
-# ]
+# game = Games('Dota') ID = 1
+# game = Game('GTA5') ID = 2
+
